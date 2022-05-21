@@ -1,0 +1,10 @@
+.logo__link {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: opacity 400ms;
+
+    &:hover {
+        color: aliceblue;
+        opacity: 0.7;
+    }
+}
