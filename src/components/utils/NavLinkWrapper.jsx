@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';

@@ -5,7 +5,8 @@ import NavLinkWrapper from '../utils/NavLinkWrapper';
 
 import './Header.scss';
 
-function Header() {
+// eslint-disable-next-line no-unused-vars
+function Header(props) {
     return (
         <Navbar bg="primary" variant="dark" className="mb-3">
             <Container>
@@ -14,11 +15,9 @@ function Header() {
                         Azeno
                     </Link>
                 </Navbar.Brand>
-                <Nav className="ml-auto">
+                <Nav className="ms-auto">
                     <NavLinkWrapper to="/train">Train</NavLinkWrapper>
                     <NavLinkWrapper to="/profile">Profile</NavLinkWrapper>
-                    <NavLinkWrapper to="/login">Login</NavLinkWrapper>
-                    <NavLinkWrapper to="/register">Register</NavLinkWrapper>
                 </Nav>
             </Container>
         </Navbar>
