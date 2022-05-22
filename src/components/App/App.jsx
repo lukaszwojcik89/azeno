@@ -1,19 +1,17 @@
 import React from 'react';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import useCookie from '../../Hooks/useCookie';
+import Core from '../core/Core';
 import Header from '../Header/Header';
-import Profile from '../Profile/Profile';
-import Train from '../Train/Train';
 import './App.scss';
 
 function App() {
+    const [cookie, setCookie] = useCookie('token_auth');
+
     return (
         <BrowserRouter>
             <Header />
-            <Routes>
-                <Route path="/" element={<Link to="/profile">Profile</Link>} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/train" element={<Train />} />
-            </Routes>
+            <Core cookie={cookie} />
         </BrowserRouter>
     );
 }

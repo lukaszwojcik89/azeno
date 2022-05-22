@@ -16,9 +16,11 @@ function Header() {
                             Azeno
                         </Link>
                     </Navbar.Brand>
-                    <Nav className="me-auto">
+                    <Nav className="ml-auto">
                         <NavLinkWrapper to="/train">Train</NavLinkWrapper>
                         <NavLinkWrapper to="/profile">Profile</NavLinkWrapper>
+                        <NavLinkWrapper to="/login">Login</NavLinkWrapper>
+                        <NavLinkWrapper to="/register">Register</NavLinkWrapper>
                     </Nav>
                 </Container>
             </Navbar>
