@@ -1,10 +1,10 @@
+/* eslint-disable react/jsx-no-bind */
 import React, { useState } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
 
-function Login() {
+function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [remember, setRemember] = useState(false);
 
     function handleEmail(event) {
         setEmail(event.target.value);
@@ -14,18 +14,15 @@ function Login() {
         setPassword(event.target.value);
     }
 
-    function handleRemember(event) {
-        setRemember(event.target.checked);
-    }
-
     function submitForm(event) {
         event.preventDefault();
+        console.log(email, password);
     }
 
     return (
         <Card>
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title>Register:</Card.Title>
                 <Form onSubmit={submitForm} className="d-flex flex-column">
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email</Form.Label>
@@ -45,16 +42,8 @@ function Login() {
                             onChange={handlePassword}
                         />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check
-                            type="checkbox"
-                            label="Remember me"
-                            checked={remember}
-                            onChange={handleRemember}
-                        />
-                    </Form.Group>
-                    <Button variant="primary" className="align-end" type="submit">
-                        Login
+                    <Button variant="primary" type="submit">
+                        Register
                     </Button>
                 </Form>
             </Card.Body>
@@ -62,4 +51,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Register;
