@@ -7,6 +7,7 @@ import Login from '../Auth/Login';
 import Register from '../Auth/Register';
 import Header from '../Header/Header';
 import Profile from '../Profile/Profile';
+import QuestionList from '../QuestionList/QuestionList';
 import Train from '../Train/Train';
 import './App.scss';
 
@@ -23,9 +24,9 @@ function App() {
                             <Route path="/" element={<Link to="/profile">Profile</Link>} />
                             <Route path="/profile" element={<Profile />} />
                             <Route path="/train" element={<Train />} />
+                            <Route path="/train/:id" element={<QuestionList />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
-                            <Route path="/train/:id" element={<h2>It works</h2>} />
                         </Routes>
                     </Col>
                 </Row>

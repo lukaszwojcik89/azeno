@@ -12,7 +12,7 @@ function Train() {
     }, []);
 
     async function getSets() {
-        const url = 'http://localhost:3000';
+        const url = 'http://localhost:3010';
         const endpoint = 'sets';
         const response = await fetch(`${url}/${endpoint}`);
 
