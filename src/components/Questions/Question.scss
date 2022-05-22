@@ -30,3 +30,15 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
+.answer-btn {
+    @media (max-width: 576px) {
+        flex-direction: column;
+    }
+    display: flex;
+    justify-content: space-around;
+    button {
+        margin: 10px;
+        width: 100%;
+    }
+}
